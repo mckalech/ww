@@ -1,0 +1,34 @@
+body{
+	padding:0;
+}
+.cont{
+	padding-top:30px;
+}
+.b-service-list__item{
+	.b-service-list-item__icons, .b-service-list-item__id{
+		display:none;
+		margin-left:10px;
+		.glyphicon{
+			cursor:pointer;
+		}
+	}
+	&:hover{
+		.b-service-list-item__icons, .b-service-list-item__id{
+			display:block;
+		}
+	}
+}
+
+.b-questions-list__item{
+	.b-questions-list-item__icons{
+		display:none;
+		.glyphicon{
+			cursor:pointer;
+		}
+	}
+	&:hover{
+		.b-questions-list-item__icons{
+			display:block;
+		}
+	}
+}
