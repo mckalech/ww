@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom'
 //import UsersListItem from './listitem';
 import _ from 'underscore';
+import AddService from './addService';
 
 
 class ServicesList extends Component {
@@ -12,7 +13,8 @@ class ServicesList extends Component {
 		super(props);
 		this.state={
 			servicesList: this.props.servicesList,
-			search: ''
+			search: '',
+			showModal: false
 		}
 	}
 	componentDidMount() {
@@ -20,7 +22,7 @@ class ServicesList extends Component {
 		//dispatch(fetchUsersList())
 		//dispatch(fetchTree())
 	}
-	
+
 	render() {
 
 		const list = _.map(this.state.servicesList, (service, i)=>(
@@ -40,7 +42,7 @@ class ServicesList extends Component {
 					<FormControl type="text" ref="search" name="search" value={this.state.search} onChange={(e)=>this.changeSearchValue(e)} />
 				</Col>
 				<Col md={2}>
-					<Button bsStyle="success"><Glyphicon glyph="plus"/> Добавить услугу</Button>
+					<Button bsStyle="success" onClick={()=>this.showModal()}><Glyphicon glyph="plus"/> Добавить услугу</Button>
 				</Col>
 			</Row>
 		)
@@ -48,19 +50,22 @@ class ServicesList extends Component {
 		
 
 		return (
-			<Row>
-				<Col md={2}></Col>
-				<Col md={8}>
-					<Panel header={(<h3>Список услуг</h3>)}>
-						{search} 
-						<br/>
-						<ListGroup>
-							{list}
-	  					</ListGroup>
-  					</Panel>
-				</Col>
-				<Col md={2}></Col>
-			</Row>
+			<div>
+				<Row>
+					<Col md={2}></Col>
+					<Col md={8}>
+						<Panel header={(<h3>Список услуг</h3>)}>
+							{search} 
+							<br/>
+							<ListGroup>
+								{list}
+		  					</ListGroup>
+	  					</Panel>
+					</Col>
+					<Col md={2}></Col>
+				</Row>
+				<AddService showModal={this.state.showModal} closeModal={this.closeModal.bind(this)}/>
+			</div>
 		)
 	}
 	changeSearchValue(e){
@@ -71,6 +76,12 @@ class ServicesList extends Component {
 			search:e.target.value,
 			servicesList: list
 		})
+	}
+	showModal(){
+		this.setState({showModal:true})
+	}
+	closeModal(){
+		this.setState({showModal:false})
 	}
 }
 	

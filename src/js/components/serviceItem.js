@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Col, Row, ListGroup, ListGroupItem,Glyphicon, Well, Breadcrumb, Panel } from 'react-bootstrap';
+import {Col, Row, ListGroup, ListGroupItem,Glyphicon, Well, Breadcrumb, Panel, Button } from 'react-bootstrap';
 import { connect } from 'react-redux';
 import { withRouter, Link } from 'react-router-dom'
 import _ from 'underscore';
@@ -28,10 +28,22 @@ class ServiceItem extends Component {
 				type: 'select',
 				title:'Селект'
 			},
+			{
+				type: 'radio',
+				title:'Радиобаттон'
+			},
+			{
+				type: 'textarea',
+				title:'Большой текст'
+			},
+			{
+				type: 'true_false',
+				title:'Да / Нет'
+			},
 		];
 
 		return _.map(q, (question, i)=>(
-			<ListGroupItem href="/addquestion/" key={i}>
+			<ListGroupItem href="/question/12345/" key={i}>
 				{question.title}
 				<QuestionIcon {...question} />
 			</ListGroupItem>
@@ -83,10 +95,14 @@ class ServiceItem extends Component {
 		  				</Panel>
 					</Col>
 					<Col md={8}>
-						<h5>Список вопросов</h5>
-						<ListGroup>
-							{this.renderServiceQuestions()}
-	  					</ListGroup>
+						<Panel 
+							header={(<h4>Список вопросов</h4>)}
+							footer={<div className="clearfix"><Button className="pull-right" bsStyle="success">Сохранить</Button></div>}
+						>
+							<ListGroup>
+								{this.renderServiceQuestions()}
+		  					</ListGroup>
+	  					</Panel>
 					</Col>
 
 				</Row>

@@ -16,6 +16,15 @@ export default class QuestionIcon extends Component {
     		case 'checkbox':
     			type = 'check';
     			break;
+    		case 'radio':
+    			type = 'ok-circle';
+    			break;
+    		case 'textarea':
+    			type = 'text-height';
+    			break;
+    		case 'true_false':
+    			type = 'ok';
+    			break;	
 	}
 		return (
 			<Glyphicon glyph={type} style={{marginRight:7, marginLeft:7}}/>

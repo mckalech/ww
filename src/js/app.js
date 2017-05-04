@@ -5,6 +5,7 @@ import configureStore from './store';
 import Box from './components/box';
 import ServicesList from './components/list';
 import ServiceItem from './components/serviceItem';
+import QuestionItem from './components/questionItem';
 import {
   BrowserRouter as Router,
   Route
@@ -22,6 +23,7 @@ render(
 					<div>
 						<Route exact path="/" component={ServicesList} />
 						<Route exact path="/service/123" component={ServiceItem} />
+						<Route exact path="/question/12345" component={QuestionItem} />
 					</div>
 				</Router>
 			</Box>
