@@ -6,6 +6,7 @@ import Box from './components/box';
 import ServicesList from './components/list';
 import ServiceItem from './components/serviceItem';
 import QuestionItem from './components/questionItem';
+import JumpItem from './components/jumpItem';
 import {
   BrowserRouter as Router,
   Route
@@ -24,6 +25,7 @@ render(
 						<Route exact path="/" component={ServicesList} />
 						<Route exact path="/service/123" component={ServiceItem} />
 						<Route exact path="/question/12345" component={QuestionItem} />
+						<Route exact path="/jump/45" component={JumpItem} />
 					</div>
 				</Router>
 			</Box>

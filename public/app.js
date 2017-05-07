@@ -66,13 +66,17 @@
 
 	var _list2 = _interopRequireDefault(_list);
 
-	var _serviceItem = __webpack_require__(532);
+	var _serviceItem = __webpack_require__(548);
 
 	var _serviceItem2 = _interopRequireDefault(_serviceItem);
 
 	var _questionItem = __webpack_require__(550);
 
 	var _questionItem2 = _interopRequireDefault(_questionItem);
+
+	var _jumpItem = __webpack_require__(551);
+
+	var _jumpItem2 = _interopRequireDefault(_jumpItem);
 
 	var _reactRouterDom = __webpack_require__(492);
 
@@ -94,7 +98,8 @@
 					null,
 					_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _list2.default }),
 					_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/service/123', component: _serviceItem2.default }),
-					_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/question/12345', component: _questionItem2.default })
+					_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/question/12345', component: _questionItem2.default }),
+					_react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/jump/45', component: _jumpItem2.default })
 				)
 			)
 		)
@@ -25295,24 +25300,31 @@
 			id: 124124
 		},
 		serviceQuestions: [{
+			id: 134754,
 			type: 'text',
 			text: 'Какова площадь квартиры?'
 		}, {
+			id: 134754,
 			type: 'select',
 			text: 'Какой тип унитаза?'
 		}, {
+			id: 134755,
 			type: 'text',
 			text: 'Когда провести работы?'
 		}, {
+			id: 134754,
 			type: 'select',
 			text: 'Сколько штук?'
 		}, {
+			id: 134754,
 			type: 'checkbox',
 			text: 'Какие дополнительные работы нужно произвести?'
 		}, {
+			id: 134754,
 			type: 'textarea',
 			text: 'Опишите задачу'
 		}, {
+			id: 134754,
 			type: 'true_false',
 			text: 'Требуется ли закупка материалов?'
 		}]
@@ -45049,7 +45061,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  padding: 0; }\n\n.cont {\n  padding-top: 30px;\n  padding-bottom: 40px; }\n\n.b-service-list__item .b-service-list-item__icons, .b-service-list__item .b-service-list-item__id {\n  display: none;\n  margin-left: 10px; }\n  .b-service-list__item .b-service-list-item__icons .glyphicon, .b-service-list__item .b-service-list-item__id .glyphicon {\n    cursor: pointer; }\n\n.b-service-list__item:hover .b-service-list-item__icons, .b-service-list__item:hover .b-service-list-item__id {\n  display: block; }\n\n.b-questions-list__item .b-questions-list-item__icons {\n  display: none; }\n  .b-questions-list__item .b-questions-list-item__icons .glyphicon {\n    cursor: pointer; }\n\n.b-questions-list__item:hover .b-questions-list-item__icons {\n  display: block; }\n", ""]);
+	exports.push([module.id, "body {\n  padding: 0; }\n\n.cont {\n  padding-top: 15px;\n  padding-bottom: 40px; }\n\n.b-service-list__item .b-service-list-item__icons, .b-service-list__item .b-service-list-item__id {\n  display: none;\n  margin-left: 10px; }\n  .b-service-list__item .b-service-list-item__icons .glyphicon, .b-service-list__item .b-service-list-item__id .glyphicon {\n    cursor: pointer; }\n\n.b-service-list__item:hover .b-service-list-item__icons, .b-service-list__item:hover .b-service-list-item__id {\n  display: block; }\n\n.b-questions-list__item .b-questions-list-item__icons {\n  display: none; }\n  .b-questions-list__item .b-questions-list-item__icons .glyphicon {\n    cursor: pointer; }\n\n.b-questions-list__item:hover .b-questions-list-item__icons {\n  display: block; }\n\n.b-condition .control-label {\n  padding-top: 7px; }\n", ""]);
 
 	// exports
 
@@ -45388,7 +45400,7 @@
 
 	var _underscore2 = _interopRequireDefault(_underscore);
 
-	var _addService = __webpack_require__(534);
+	var _addService = __webpack_require__(532);
 
 	var _addService2 = _interopRequireDefault(_addService);
 
@@ -50611,304 +50623,7 @@
 
 	var _underscore2 = _interopRequireDefault(_underscore);
 
-	var _questionIcon = __webpack_require__(533);
-
-	var _questionIcon2 = _interopRequireDefault(_questionIcon);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var ServiceItem = function (_Component) {
-		_inherits(ServiceItem, _Component);
-
-		function ServiceItem(props) {
-			_classCallCheck(this, ServiceItem);
-
-			var _this = _possibleConstructorReturn(this, (ServiceItem.__proto__ || Object.getPrototypeOf(ServiceItem)).call(this, props));
-
-			_this.state = {};
-			return _this;
-		}
-
-		_createClass(ServiceItem, [{
-			key: 'componentDidMount',
-			value: function componentDidMount() {
-				var dispatch = this.props.dispatch;
-			}
-		}, {
-			key: 'renderQuestions',
-			value: function renderQuestions() {
-				var q = [{
-					type: 'text',
-					title: 'Текстовое поле'
-				}, {
-					type: 'checkbox',
-					title: 'Мультивыбор'
-				}, {
-					type: 'select',
-					title: 'Селект'
-				}, {
-					type: 'radio',
-					title: 'Радиобаттон'
-				}, {
-					type: 'textarea',
-					title: 'Большой текст'
-				}, {
-					type: 'true_false',
-					title: 'Да / Нет'
-				}];
-
-				return _underscore2.default.map(q, function (question, i) {
-					return _react2.default.createElement(
-						_reactBootstrap.ListGroupItem,
-						{ href: '/question/12345/', key: i },
-						question.title,
-						_react2.default.createElement(_questionIcon2.default, question)
-					);
-				});
-			}
-		}, {
-			key: 'renderServiceQuestions',
-			value: function renderServiceQuestions() {
-				return _underscore2.default.map(this.props.serviceQuestions, function (question, i) {
-					return _react2.default.createElement(
-						_reactBootstrap.ListGroupItem,
-						{ key: i, className: 'b-questions-list__item' },
-						_react2.default.createElement(
-							'span',
-							null,
-							i + 1,
-							'. '
-						),
-						_react2.default.createElement(_questionIcon2.default, question),
-						_react2.default.createElement(
-							_reactRouterDom.Link,
-							{ to: '/question/12345' },
-							question.text
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'pull-right b-questions-list-item__icons' },
-							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'share-alt', style: { marginRight: 15 } }),
-							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'arrow-down', style: { marginRight: 15 } }),
-							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'arrow-up', style: { marginRight: 15 } }),
-							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'remove' })
-						)
-					);
-				});
-			}
-		}, {
-			key: 'renderBread',
-			value: function renderBread() {
-				return _react2.default.createElement(
-					_reactBootstrap.Row,
-					null,
-					_react2.default.createElement(
-						_reactBootstrap.Breadcrumb,
-						null,
-						_react2.default.createElement(
-							_reactBootstrap.Breadcrumb.Item,
-							{ href: '/' },
-							'\u0421\u043F\u0438\u0441\u043E\u043A \u0443\u0441\u043B\u0443\u0433'
-						),
-						_react2.default.createElement(
-							_reactBootstrap.Breadcrumb.Item,
-							{ active: true },
-							'\u0421\u0430\u043D\u0442\u0435\u0445\u043D\u0438\u043A\u0430'
-						)
-					)
-				);
-			}
-		}, {
-			key: 'render',
-			value: function render() {
-				return _react2.default.createElement(
-					'div',
-					null,
-					this.renderBread(),
-					_react2.default.createElement(
-						_reactBootstrap.Row,
-						null,
-						_react2.default.createElement(
-							_reactBootstrap.Well,
-							null,
-							_react2.default.createElement(
-								'h3',
-								null,
-								'\u0423\u0441\u043B\u0443\u0433\u0430: \u0421\u0430\u043D\u0442\u0435\u0445\u043D\u0438\u043A\u0430'
-							),
-							_react2.default.createElement(
-								'h5',
-								null,
-								'Pservice_id: 1221412'
-							)
-						)
-					),
-					_react2.default.createElement(
-						_reactBootstrap.Row,
-						null,
-						_react2.default.createElement(
-							_reactBootstrap.Col,
-							{ md: 4 },
-							_react2.default.createElement(
-								_reactBootstrap.Panel,
-								{ header: _react2.default.createElement(
-										'h4',
-										null,
-										'\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432\u043E\u043F\u0440\u043E\u0441'
-									) },
-								_react2.default.createElement(
-									_reactBootstrap.ListGroup,
-									null,
-									this.renderQuestions()
-								)
-							)
-						),
-						_react2.default.createElement(
-							_reactBootstrap.Col,
-							{ md: 8 },
-							_react2.default.createElement(
-								_reactBootstrap.Panel,
-								{
-									header: _react2.default.createElement(
-										'h4',
-										null,
-										'\u0421\u043F\u0438\u0441\u043E\u043A \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432'
-									),
-									footer: _react2.default.createElement(
-										'div',
-										{ className: 'clearfix' },
-										_react2.default.createElement(
-											_reactBootstrap.Button,
-											{ className: 'pull-right', bsStyle: 'success' },
-											'\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C'
-										)
-									)
-								},
-								_react2.default.createElement(
-									_reactBootstrap.ListGroup,
-									null,
-									this.renderServiceQuestions()
-								)
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return ServiceItem;
-	}(_react.Component);
-
-	function mapStateToProps(state, ownProps) {
-		return {
-			serviceItem: state.serviceItem,
-			serviceQuestions: state.serviceQuestions
-		};
-	}
-
-	exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps)(ServiceItem));
-
-/***/ }),
-/* 533 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(182);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactBootstrap = __webpack_require__(234);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var QuestionIcon = function (_Component) {
-	  _inherits(QuestionIcon, _Component);
-
-	  function QuestionIcon() {
-	    _classCallCheck(this, QuestionIcon);
-
-	    return _possibleConstructorReturn(this, (QuestionIcon.__proto__ || Object.getPrototypeOf(QuestionIcon)).apply(this, arguments));
-	  }
-
-	  _createClass(QuestionIcon, [{
-	    key: 'render',
-	    value: function render() {
-	      var type = void 0;
-	      switch (this.props.type) {
-	        case 'select':
-	          type = 'th-list';
-	          break;
-	        case 'text':
-	          type = 'text-size';
-	          break;
-	        case 'checkbox':
-	          type = 'check';
-	          break;
-	        case 'radio':
-	          type = 'ok-circle';
-	          break;
-	        case 'textarea':
-	          type = 'text-height';
-	          break;
-	        case 'true_false':
-	          type = 'ok';
-	          break;
-	      }
-	      return _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: type, style: { marginRight: 7, marginLeft: 7 } });
-	    }
-	  }]);
-
-	  return QuestionIcon;
-	}(_react.Component);
-
-	exports.default = QuestionIcon;
-
-/***/ }),
-/* 534 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(182);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactBootstrap = __webpack_require__(234);
-
-	var _reactRedux = __webpack_require__(183);
-
-	var _reactRouterDom = __webpack_require__(492);
-
-	var _underscore = __webpack_require__(531);
-
-	var _underscore2 = _interopRequireDefault(_underscore);
-
-	var _reactSelect = __webpack_require__(535);
+	var _reactSelect = __webpack_require__(533);
 
 	var _reactSelect2 = _interopRequireDefault(_reactSelect);
 
@@ -50999,7 +50714,7 @@
 	exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps)(AddService));
 
 /***/ }),
-/* 535 */
+/* 533 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/*!
@@ -51030,7 +50745,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _reactInputAutosize = __webpack_require__(536);
+	var _reactInputAutosize = __webpack_require__(534);
 
 	var _reactInputAutosize2 = _interopRequireDefault(_reactInputAutosize);
 
@@ -51038,39 +50753,39 @@
 
 	var _classnames2 = _interopRequireDefault(_classnames);
 
-	var _utilsDefaultArrowRenderer = __webpack_require__(540);
+	var _utilsDefaultArrowRenderer = __webpack_require__(538);
 
 	var _utilsDefaultArrowRenderer2 = _interopRequireDefault(_utilsDefaultArrowRenderer);
 
-	var _utilsDefaultFilterOptions = __webpack_require__(541);
+	var _utilsDefaultFilterOptions = __webpack_require__(539);
 
 	var _utilsDefaultFilterOptions2 = _interopRequireDefault(_utilsDefaultFilterOptions);
 
-	var _utilsDefaultMenuRenderer = __webpack_require__(543);
+	var _utilsDefaultMenuRenderer = __webpack_require__(541);
 
 	var _utilsDefaultMenuRenderer2 = _interopRequireDefault(_utilsDefaultMenuRenderer);
 
-	var _utilsDefaultClearRenderer = __webpack_require__(544);
+	var _utilsDefaultClearRenderer = __webpack_require__(542);
 
 	var _utilsDefaultClearRenderer2 = _interopRequireDefault(_utilsDefaultClearRenderer);
 
-	var _Async = __webpack_require__(545);
+	var _Async = __webpack_require__(543);
 
 	var _Async2 = _interopRequireDefault(_Async);
 
-	var _AsyncCreatable = __webpack_require__(546);
+	var _AsyncCreatable = __webpack_require__(544);
 
 	var _AsyncCreatable2 = _interopRequireDefault(_AsyncCreatable);
 
-	var _Creatable = __webpack_require__(547);
+	var _Creatable = __webpack_require__(545);
 
 	var _Creatable2 = _interopRequireDefault(_Creatable);
 
-	var _Option = __webpack_require__(548);
+	var _Option = __webpack_require__(546);
 
 	var _Option2 = _interopRequireDefault(_Option);
 
-	var _Value = __webpack_require__(549);
+	var _Value = __webpack_require__(547);
 
 	var _Value2 = _interopRequireDefault(_Value);
 
@@ -52231,7 +51946,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 536 */
+/* 534 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52240,7 +51955,7 @@
 
 	var React = __webpack_require__(182);
 	var PropTypes = __webpack_require__(185);
-	var createClass = __webpack_require__(537);
+	var createClass = __webpack_require__(535);
 
 	var sizerStyle = {
 		position: 'absolute',
@@ -52401,7 +52116,7 @@
 	module.exports = AutosizeInput;
 
 /***/ }),
-/* 537 */
+/* 535 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/**
@@ -52417,7 +52132,7 @@
 	'use strict';
 
 	var React = __webpack_require__(182);
-	var factory = __webpack_require__(538);
+	var factory = __webpack_require__(536);
 
 	// Hack to grab NoopUpdateQueue from isomorphic React
 	var ReactNoopUpdateQueue = new React.Component().updater;
@@ -52430,7 +52145,7 @@
 
 
 /***/ }),
-/* 538 */
+/* 536 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
@@ -52445,7 +52160,7 @@
 
 	'use strict';
 
-	var _assign = __webpack_require__(539);
+	var _assign = __webpack_require__(537);
 
 	var emptyObject = __webpack_require__(104);
 	var _invariant = __webpack_require__(7);
@@ -53161,7 +52876,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
 
 /***/ }),
-/* 539 */
+/* 537 */
 /***/ (function(module, exports) {
 
 	/*
@@ -53257,7 +52972,7 @@
 
 
 /***/ }),
-/* 540 */
+/* 538 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -53286,14 +53001,14 @@
 	module.exports = exports["default"];
 
 /***/ }),
-/* 541 */
+/* 539 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _stripDiacritics = __webpack_require__(542);
+	var _stripDiacritics = __webpack_require__(540);
 
 	var _stripDiacritics2 = _interopRequireDefault(_stripDiacritics);
 
@@ -53333,7 +53048,7 @@
 	module.exports = filterOptions;
 
 /***/ }),
-/* 542 */
+/* 540 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -53348,7 +53063,7 @@
 	};
 
 /***/ }),
-/* 543 */
+/* 541 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53414,7 +53129,7 @@
 	module.exports = menuRenderer;
 
 /***/ }),
-/* 544 */
+/* 542 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53441,7 +53156,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 545 */
+/* 543 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53468,11 +53183,11 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Select = __webpack_require__(535);
+	var _Select = __webpack_require__(533);
 
 	var _Select2 = _interopRequireDefault(_Select);
 
-	var _utilsStripDiacritics = __webpack_require__(542);
+	var _utilsStripDiacritics = __webpack_require__(540);
 
 	var _utilsStripDiacritics2 = _interopRequireDefault(_utilsStripDiacritics);
 
@@ -53711,7 +53426,7 @@
 	module.exports = exports['default'];
 
 /***/ }),
-/* 546 */
+/* 544 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53724,7 +53439,7 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Select = __webpack_require__(535);
+	var _Select = __webpack_require__(533);
 
 	var _Select2 = _interopRequireDefault(_Select);
 
@@ -53772,7 +53487,7 @@
 	module.exports = AsyncCreatable;
 
 /***/ }),
-/* 547 */
+/* 545 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53787,15 +53502,15 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Select = __webpack_require__(535);
+	var _Select = __webpack_require__(533);
 
 	var _Select2 = _interopRequireDefault(_Select);
 
-	var _utilsDefaultFilterOptions = __webpack_require__(541);
+	var _utilsDefaultFilterOptions = __webpack_require__(539);
 
 	var _utilsDefaultFilterOptions2 = _interopRequireDefault(_utilsDefaultFilterOptions);
 
-	var _utilsDefaultMenuRenderer = __webpack_require__(543);
+	var _utilsDefaultMenuRenderer = __webpack_require__(541);
 
 	var _utilsDefaultMenuRenderer2 = _interopRequireDefault(_utilsDefaultMenuRenderer);
 
@@ -54093,7 +53808,7 @@
 	module.exports = Creatable;
 
 /***/ }),
-/* 548 */
+/* 546 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54209,7 +53924,7 @@
 	module.exports = Option;
 
 /***/ }),
-/* 549 */
+/* 547 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54320,6 +54035,350 @@
 	module.exports = Value;
 
 /***/ }),
+/* 548 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(182);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(234);
+
+	var _reactRedux = __webpack_require__(183);
+
+	var _reactRouterDom = __webpack_require__(492);
+
+	var _underscore = __webpack_require__(531);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _questionIcon = __webpack_require__(549);
+
+	var _questionIcon2 = _interopRequireDefault(_questionIcon);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var ServiceItem = function (_Component) {
+		_inherits(ServiceItem, _Component);
+
+		function ServiceItem(props) {
+			_classCallCheck(this, ServiceItem);
+
+			var _this = _possibleConstructorReturn(this, (ServiceItem.__proto__ || Object.getPrototypeOf(ServiceItem)).call(this, props));
+
+			_this.state = {};
+			return _this;
+		}
+
+		_createClass(ServiceItem, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var dispatch = this.props.dispatch;
+			}
+		}, {
+			key: 'renderQuestions',
+			value: function renderQuestions() {
+				var q = [{
+					type: 'text',
+					title: 'Текстовое поле'
+				}, {
+					type: 'checkbox',
+					title: 'Мультивыбор'
+				}, {
+					type: 'select',
+					title: 'Селект'
+				}, {
+					type: 'radio',
+					title: 'Радиобаттон'
+				}, {
+					type: 'textarea',
+					title: 'Большой текст'
+				}, {
+					type: 'true_false',
+					title: 'Да / Нет'
+				}];
+
+				return _underscore2.default.map(q, function (question, i) {
+					return _react2.default.createElement(
+						_reactBootstrap.ListGroupItem,
+						{ href: '/question/12345/', key: i },
+						question.title,
+						_react2.default.createElement(_questionIcon2.default, question)
+					);
+				});
+			}
+		}, {
+			key: 'renderServiceQuestions',
+			value: function renderServiceQuestions() {
+				return _underscore2.default.map(this.props.serviceQuestions, function (question, i) {
+					return _react2.default.createElement(
+						_reactBootstrap.ListGroupItem,
+						{ key: i, className: 'b-questions-list__item' },
+						_react2.default.createElement(
+							'span',
+							null,
+							i + 1,
+							'. '
+						),
+						_react2.default.createElement(_questionIcon2.default, question),
+						_react2.default.createElement(
+							_reactRouterDom.Link,
+							{ to: '/question/12345' },
+							question.text
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'pull-right b-questions-list-item__icons' },
+							_react2.default.createElement(
+								_reactRouterDom.Link,
+								{ to: '/jump/45' },
+								_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'share-alt', style: { marginRight: 15 } })
+							),
+							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'arrow-down', style: { marginRight: 15 } }),
+							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'arrow-up', style: { marginRight: 15 } }),
+							_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'remove' })
+						)
+					);
+				});
+			}
+		}, {
+			key: 'renderBread',
+			value: function renderBread() {
+				return _react2.default.createElement(
+					_reactBootstrap.Row,
+					null,
+					_react2.default.createElement(
+						_reactBootstrap.Breadcrumb,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Breadcrumb.Item,
+							{ href: '/' },
+							'\u0421\u043F\u0438\u0441\u043E\u043A \u0443\u0441\u043B\u0443\u0433'
+						),
+						_react2.default.createElement(
+							_reactBootstrap.Breadcrumb.Item,
+							{ active: true },
+							'\u0421\u0430\u043D\u0442\u0435\u0445\u043D\u0438\u043A\u0430'
+						)
+					)
+				);
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					this.renderBread(),
+					_react2.default.createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2.default.createElement(_reactBootstrap.Col, { md: 2 }),
+						_react2.default.createElement(
+							_reactBootstrap.Col,
+							{ md: 8 },
+							_react2.default.createElement(
+								_reactBootstrap.Well,
+								null,
+								_react2.default.createElement(
+									'h3',
+									{ style: { marginTop: 0 } },
+									'\u0423\u0441\u043B\u0443\u0433\u0430: \u0421\u0430\u043D\u0442\u0435\u0445\u043D\u0438\u043A\u0430'
+								),
+								_react2.default.createElement(
+									'h5',
+									null,
+									'Pservice_id: 1221412'
+								),
+								_react2.default.createElement(
+									'h5',
+									null,
+									_react2.default.createElement(
+										_reactRouterDom.Link,
+										{ to: '/' },
+										_react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: 'stats' }),
+										' \u041A\u043E\u043D\u0432\u0435\u0440\u0441\u0438\u044F: 67%'
+									)
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Col,
+							{ md: 4 },
+							_react2.default.createElement(
+								_reactBootstrap.Panel,
+								{ header: _react2.default.createElement(
+										'h4',
+										null,
+										'\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432\u043E\u043F\u0440\u043E\u0441'
+									) },
+								_react2.default.createElement(
+									_reactBootstrap.ListGroup,
+									null,
+									this.renderQuestions()
+								)
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Panel,
+								{ header: _react2.default.createElement(
+										'h4',
+										null,
+										'\u0414\u043E\u043F\u043E\u043B\u043D\u0438\u0442\u0435\u043B\u044C\u043D\u043E'
+									) },
+								_react2.default.createElement(
+									_reactBootstrap.Checkbox,
+									null,
+									'\u0421\u043B\u0430\u0439\u0434 "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044C \u0444\u043E\u0442\u043E"'
+								),
+								_react2.default.createElement(
+									_reactBootstrap.Checkbox,
+									null,
+									'\u0421\u043B\u0430\u0439\u0434 "\u0426\u0435\u043D\u0430"'
+								),
+								_react2.default.createElement(
+									_reactBootstrap.Checkbox,
+									null,
+									'\u0421\u043B\u0430\u0439\u0434 "\u0413\u0435\u043E"'
+								),
+								_react2.default.createElement(
+									_reactBootstrap.Checkbox,
+									null,
+									'\u0421\u043B\u0430\u0439\u0434 "\u041A\u043E\u043D\u0442\u0430\u043A\u0442\u044B"'
+								)
+							)
+						),
+						_react2.default.createElement(
+							_reactBootstrap.Col,
+							{ md: 8 },
+							_react2.default.createElement(
+								_reactBootstrap.Panel,
+								{
+									header: _react2.default.createElement(
+										'h4',
+										null,
+										'\u0421\u043F\u0438\u0441\u043E\u043A \u0432\u043E\u043F\u0440\u043E\u0441\u043E\u0432'
+									),
+									footer: _react2.default.createElement(
+										'div',
+										{ className: 'clearfix' },
+										_react2.default.createElement(
+											_reactBootstrap.Button,
+											{ className: 'pull-right', bsStyle: 'success' },
+											'\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C'
+										)
+									)
+								},
+								_react2.default.createElement(
+									_reactBootstrap.ListGroup,
+									null,
+									this.renderServiceQuestions()
+								)
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return ServiceItem;
+	}(_react.Component);
+
+	function mapStateToProps(state, ownProps) {
+		return {
+			serviceItem: state.serviceItem,
+			serviceQuestions: state.serviceQuestions
+		};
+	}
+
+	exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps)(ServiceItem));
+
+/***/ }),
+/* 549 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(182);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(234);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var QuestionIcon = function (_Component) {
+	  _inherits(QuestionIcon, _Component);
+
+	  function QuestionIcon() {
+	    _classCallCheck(this, QuestionIcon);
+
+	    return _possibleConstructorReturn(this, (QuestionIcon.__proto__ || Object.getPrototypeOf(QuestionIcon)).apply(this, arguments));
+	  }
+
+	  _createClass(QuestionIcon, [{
+	    key: 'render',
+	    value: function render() {
+	      var type = void 0;
+	      switch (this.props.type) {
+	        case 'select':
+	          type = 'th-list';
+	          break;
+	        case 'text':
+	          type = 'text-size';
+	          break;
+	        case 'checkbox':
+	          type = 'check';
+	          break;
+	        case 'radio':
+	          type = 'ok-circle';
+	          break;
+	        case 'textarea':
+	          type = 'text-height';
+	          break;
+	        case 'true_false':
+	          type = 'ok';
+	          break;
+	      }
+	      return _react2.default.createElement(_reactBootstrap.Glyphicon, { glyph: type, style: { marginRight: 7, marginLeft: 7 } });
+	    }
+	  }]);
+
+	  return QuestionIcon;
+	}(_react.Component);
+
+	exports.default = QuestionIcon;
+
+/***/ }),
 /* 550 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -54345,7 +54404,7 @@
 
 	var _underscore2 = _interopRequireDefault(_underscore);
 
-	var _questionIcon = __webpack_require__(533);
+	var _questionIcon = __webpack_require__(549);
 
 	var _questionIcon2 = _interopRequireDefault(_questionIcon);
 
@@ -54456,7 +54515,7 @@
 										{ className: 'clearfix' },
 										_react2.default.createElement(
 											_reactBootstrap.Button,
-											{ className: 'pull-right', bsStyle: 'success' },
+											{ href: '/service/123/', className: 'pull-right', bsStyle: 'success' },
 											'\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C'
 										)
 									)
@@ -54530,6 +54589,265 @@
 	}
 
 	exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps)(QuestionItem));
+
+/***/ }),
+/* 551 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(182);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(234);
+
+	var _reactRedux = __webpack_require__(183);
+
+	var _reactRouterDom = __webpack_require__(492);
+
+	var _underscore = __webpack_require__(531);
+
+	var _underscore2 = _interopRequireDefault(_underscore);
+
+	var _reactSelect = __webpack_require__(533);
+
+	var _reactSelect2 = _interopRequireDefault(_reactSelect);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var answers = [{
+		value: 0,
+		label: 'Сегодня'
+	}, {
+		value: 1,
+		label: 'Завтра'
+	}, {
+		value: 2,
+		label: 'На неделе'
+	}, {
+		value: 3,
+		label: 'Без разницы'
+	}];
+
+	var JumpItem = function (_Component) {
+		_inherits(JumpItem, _Component);
+
+		function JumpItem(props) {
+			_classCallCheck(this, JumpItem);
+
+			var _this = _possibleConstructorReturn(this, (JumpItem.__proto__ || Object.getPrototypeOf(JumpItem)).call(this, props));
+
+			_this.state = {
+				conditionsCount: 1,
+				serviceValue: ''
+			};
+			return _this;
+		}
+
+		_createClass(JumpItem, [{
+			key: 'componentDidMount',
+			value: function componentDidMount() {
+				var dispatch = this.props.dispatch;
+			}
+		}, {
+			key: 'renderBread',
+			value: function renderBread() {
+				return _react2.default.createElement(
+					_reactBootstrap.Row,
+					null,
+					_react2.default.createElement(
+						_reactBootstrap.Breadcrumb,
+						null,
+						_react2.default.createElement(
+							_reactBootstrap.Breadcrumb.Item,
+							{ href: '/' },
+							'\u0421\u043F\u0438\u0441\u043E\u043A \u0443\u0441\u043B\u0443\u0433'
+						),
+						_react2.default.createElement(
+							_reactBootstrap.Breadcrumb.Item,
+							{ href: '/service/123' },
+							'\u0421\u0430\u043D\u0442\u0435\u0445\u043D\u0438\u043A\u0430'
+						),
+						_react2.default.createElement(
+							_reactBootstrap.Breadcrumb.Item,
+							{ active: true },
+							'\u0412\u0435\u0442\u0432\u043B\u0435\u043D\u0438\u0435: \u041A\u043E\u0433\u0434\u0430 \u043F\u0440\u043E\u0432\u0435\u0441\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u044B?'
+						)
+					)
+				);
+			}
+		}, {
+			key: 'renderConditions',
+			value: function renderConditions() {
+				var _this2 = this;
+
+				var options = this.props.serviceQuestions.map(function (s) {
+					return {
+						value: s.id,
+						label: s.text
+					};
+				});
+				var conditions = [];
+				for (var i = 0; i < this.state.conditionsCount; i++) {
+					conditions.push(_react2.default.createElement(
+						_reactBootstrap.Well,
+						{ key: i, className: 'b-condition' },
+						_react2.default.createElement(
+							_reactBootstrap.Row,
+							null,
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 1 },
+								_react2.default.createElement(
+									_reactBootstrap.ControlLabel,
+									null,
+									'\u0415\u0441\u043B\u0438'
+								)
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 4 },
+								_react2.default.createElement(_reactSelect2.default, {
+									name: 'form-field-name',
+									value: 134755,
+									options: options
+								})
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 2 },
+								_react2.default.createElement(_reactSelect2.default, {
+									name: 'form-field-name',
+									options: [{ value: 1, label: "=" }, { value: 0, label: "!=" }]
+								})
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 5 },
+								_react2.default.createElement(_reactSelect2.default, {
+									name: 'form-field-name',
+									options: answers
+								})
+							)
+						),
+						_react2.default.createElement('br', null),
+						_react2.default.createElement(
+							_reactBootstrap.Row,
+							null,
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 1 },
+								_react2.default.createElement(
+									_reactBootstrap.ControlLabel,
+									null,
+									'Go to'
+								)
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 4 },
+								_react2.default.createElement(_reactSelect2.default, {
+									name: 'form-field-name',
+									options: options
+								})
+							),
+							_react2.default.createElement(
+								_reactBootstrap.Col,
+								{ md: 7 },
+								_react2.default.createElement(
+									_reactBootstrap.Button,
+									{
+										bsStyle: 'warning',
+										className: 'pull-right',
+										onClick: function onClick() {
+											return _this2.setState({ conditionsCount: _this2.state.conditionsCount - 1 });
+										} },
+									'\u0423\u0434\u0430\u043B\u0438\u0442\u044C'
+								)
+							)
+						)
+					));
+				}
+				return conditions;
+			}
+		}, {
+			key: 'render',
+			value: function render() {
+				var _this3 = this;
+
+				return _react2.default.createElement(
+					'div',
+					null,
+					this.renderBread(),
+					_react2.default.createElement(
+						_reactBootstrap.Row,
+						null,
+						_react2.default.createElement(_reactBootstrap.Col, { md: 1 }),
+						_react2.default.createElement(
+							_reactBootstrap.Col,
+							{ md: 10 },
+							_react2.default.createElement(
+								_reactBootstrap.Panel,
+								{
+									header: _react2.default.createElement(
+										'h4',
+										null,
+										'\u0412\u0435\u0442\u0432\u043B\u0435\u043D\u0438\u0435: \u041A\u043E\u0433\u0434\u0430 \u043F\u0440\u043E\u0432\u0435\u0441\u0442\u0438 \u0440\u0430\u0431\u043E\u0442\u044B?'
+									),
+									footer: _react2.default.createElement(
+										'div',
+										{ className: 'clearfix' },
+										_react2.default.createElement(
+											_reactBootstrap.Button,
+											{ href: '/service/123/', className: 'pull-right', bsStyle: 'success' },
+											'\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u044C'
+										)
+									)
+								},
+								_react2.default.createElement(
+									_reactBootstrap.Form,
+									null,
+									this.renderConditions(),
+									_react2.default.createElement(
+										_reactBootstrap.Button,
+										{ bsStyle: 'primary', onClick: function onClick() {
+												return _this3.setState({ conditionsCount: _this3.state.conditionsCount + 1 });
+											} },
+										'\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0443\u0441\u043B\u043E\u0432\u0438\u0435'
+									)
+								)
+							)
+						),
+						_react2.default.createElement(_reactBootstrap.Col, { md: 1 })
+					)
+				);
+			}
+		}]);
+
+		return JumpItem;
+	}(_react.Component);
+
+	function mapStateToProps(state, ownProps) {
+		return {
+			serviceItem: state.serviceItem,
+			serviceQuestions: state.serviceQuestions
+		};
+	}
+
+	exports.default = (0, _reactRouterDom.withRouter)((0, _reactRedux.connect)(mapStateToProps)(JumpItem));
 
 /***/ })
 /******/ ]);

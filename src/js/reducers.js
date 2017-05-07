@@ -46,30 +46,37 @@ const initialState = {
 	},
 	serviceQuestions:[
 		{
+			id:134754,
 			type: 'text',
 			text:'Какова площадь квартиры?',
 		},
 		{
+			id:134754,
 			type: 'select',
 			text:'Какой тип унитаза?'
 		},
 		{
+			id:134755,
 			type: 'text',
 			text:'Когда провести работы?'
 		},
 		{
+			id:134754,
 			type: 'select',
 			text:'Сколько штук?'
 		},
 		{
+			id:134754,
 			type: 'checkbox',
 			text:'Какие дополнительные работы нужно произвести?'
 		},
 		{
+			id:134754,
 			type: 'textarea',
 			text:'Опишите задачу'
 		},
 		{
+			id:134754,
 			type: 'true_false',
 			text:'Требуется ли закупка материалов?'
 		},

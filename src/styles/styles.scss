@@ -2,7 +2,7 @@ body{
 	padding:0;
 }
 .cont{
-	padding-top:30px;
+	padding-top:15px;
 	padding-bottom:40px;
 }
 .b-service-list__item{
@@ -31,5 +31,11 @@ body{
 		.b-questions-list-item__icons{
 			display:block;
 		}
+	}
+}
+
+.b-condition{
+	.control-label{
+		padding-top:7px;
 	}
 }

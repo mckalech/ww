@@ -51,7 +51,7 @@ class QuestionItem extends Component {
 					<Col md={8}>
 						<Panel 
 							header={(<h4>Тип вопроса: <b>Checkbox</b><QuestionIcon type="checkbox"/></h4>)}
-							footer={<div className="clearfix"><Button className="pull-right" bsStyle="success">Сохранить</Button></div>}
+							footer={<div className="clearfix"><Button href="/service/123/" className="pull-right" bsStyle="success">Сохранить</Button></div>}
 						>
 							<Form>
 								<ControlLabel>Текст вопроса</ControlLabel>
