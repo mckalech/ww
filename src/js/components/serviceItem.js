@@ -78,8 +78,8 @@ class ServiceItem extends Component {
 		return (
 			<div>
 				{this.renderBread()}
-				<Row><Col md={2}></Col>
-					<Col md={8}>
+				<Row>
+					<Col md={12}>
 						<Well>
 							<h3 style={{marginTop:0}}>Услуга: Сантехника</h3>
 							<h5>Pservice_id: 1221412</h5>
